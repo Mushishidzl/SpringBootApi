@@ -3,6 +3,12 @@ package com.rain.api;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @program: SpringBootApi
+ * @description: 启动入口
+ * @author: Rain
+ * @create: 2018-06-11 10:44
+ **/
 @SpringBootApplication
 public class ApiApplication {
 
