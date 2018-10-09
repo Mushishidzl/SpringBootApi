@@ -12,12 +12,12 @@
     <description>api 接口项目</description>
 
 
-    <!-- 华为Maven镜像 当然你也可以用阿里的-->
+    <!-- 华为镜像 阿里云镜像-->
     <repositories>
         <repository>
-            <id>huaweicloud</id>
-            <url>https://repo.huaweicloud.com/repository/maven/</url>
-            <!--<url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+            <id>aliyuncloud</id>
+            <!--<url>https://repo.huaweicloud.com/repository/maven/</url>-->
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -40,6 +40,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <swagger.version>2.5.0</swagger.version>
     </properties>
 
     <dependencies>
@@ -71,6 +72,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.0</version>
+        </dependency>
 
         <!--阿里巴巴 fastJson-->
         <dependency>
@@ -78,6 +88,18 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.44</version>
         </dependency>
+
+        <!--H2数据库-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+        <!--MYSQL数据库-->
+        <!--<dependency>-->
+        <!--<groupId>mysql</groupId>-->
+        <!--<artifactId>mysql-connector-java</artifactId>-->
+        <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
 
 
         <!--commons -->
@@ -87,17 +109,25 @@
             <version>3.6</version>
         </dependency>
 
-        <!--swagger2-->
+        <!--jjwt token-->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+
+        <!--swagger2-API可视化-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.8.0</version>
+            <version>${swagger.version}</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.8.0</version>
+            <version>${swagger.version}</version>
         </dependency>
+
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>

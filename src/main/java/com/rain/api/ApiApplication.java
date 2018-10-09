@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @program: SpringBootApi
  * @description: 启动入口
- * @author: Rain
+ * @author: Mushishi
  * @create: 2018-06-11 10:44
  **/
 @SpringBootApplication
